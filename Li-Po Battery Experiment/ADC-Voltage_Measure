@@ -1,0 +1,52 @@
+//----------------------------------------------------------------------------------------
+//Title: ECE570_IoT_Li-Po Battery Charging & Discharging Experiment
+//----------------------------------------------------------------------------------------
+//Program Detail:
+//----------------------------------------------------------------------------------------
+//Purpose: To Convert Measured ADC At Port A0 As Voltage Measurements
+//Inputs: Port A0 Of ESP8266 (Voltage Divider I/P Of LiPo Battery)
+//Outputs: Convert Measured ADC To Voltage Values
+//Date: 01-Oct-2026 ; 11:30 PM
+//Compiler: Xtensa
+//Author: Christy Sahayaraj
+//Versions: V1-Blink Code
+//          V2-Baseline Voltage Code
+//          V3-Final Code
+//----------------------------------------------------------------------------------------
+//File Dependencies: 
+#include <Arduino.h>
+//----------------------------------------------------------------------------------------
+//Main Program
+//----------------------------------------------------------------------------------------
+void setup() {
+  Serial.begin(115200);
+
+  // CSV header
+  Serial.println("Sample,Time_min,ADC,Battery_V");
+}
+
+void loop() {
+  static unsigned long sampleNumber = 1;
+
+  int adcValue = analogRead(A0);
+
+  // Two-point calibrated conversion
+  float batteryVoltage = 0.0072078 * adcValue - 0.1090; //ADC To V Conversion Using V1/V2 Baseline Measure.
+
+  float timeMinutes = sampleNumber - 1;
+
+  Serial.print(sampleNumber);
+  Serial.print(",");
+
+  Serial.print(timeMinutes, 0);
+  Serial.print(",");
+
+  Serial.print(adcValue);
+  Serial.print(",");
+
+  Serial.println(batteryVoltage, 3);
+
+  sampleNumber++;
+
+  delay(60000);   // 60 seconds
+}
