@@ -2,222 +2,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-  <title>ECE IoT | Chris David</title>
+    <title>ECE IoT Assignments | Chris David</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f6f8;
+            color: #263238;
+        }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f6f8;
-      color: #263238;
-      line-height: 1.6;
-    }
+        header {
+            background-color: #087e83;
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
 
-    header {
-      background: #087e83;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
 
-    header h1 {
-      margin: 0 0 12px;
-      font-size: 32px;
-    }
+        header p {
+            margin-top: 12px;
+        }
 
-    header p {
-      margin: 5px 0;
-    }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-    nav {
-      background: #075e63;
-      text-align: center;
-      padding: 15px;
-    }
+        h2 {
+            color: #087e83;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+        .card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+        .card h3 {
+            color: #087e83;
+            margin-top: 0;
+        }
 
-    main {
-      max-width: 1000px;
-      margin: 35px auto;
-      padding: 0 20px;
-    }
+        .button {
+            display: inline-block;
+            background-color: #087e83;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
 
-    h2 {
-      color: #087e83;
-    }
+        .button:hover {
+            background-color: #05595d;
+        }
 
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 25px;
-      margin-bottom: 22px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      color: #087e83;
-      margin-top: 0;
-    }
-
-    .button {
-      display: inline-block;
-      background: #087e83;
-      color: white;
-      text-decoration: none;
-      padding: 10px 16px;
-      margin: 8px 8px 0 0;
-      border-radius: 5px;
-    }
-
-    .button:hover {
-      background: #05595d;
-    }
-
-    footer {
-      background: #075e63;
-      color: white;
-      text-align: center;
-      padding: 22px;
-      margin-top: 45px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 25px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
-
-      .button {
-        display: block;
-        text-align: center;
-      }
-    }
-  </style>
+        footer {
+            background-color: #075e63;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>ECE IoT Assignment Portfolio</h1>
-    <p>Sonoma State University</p>
-    <p>Fall 2026</p>
-    <p>Student: Chris David</p>
-  </header>
+    <header>
+        <h1>ECE IoT Assignment Portfolio</h1>
+        <p>Sonoma State University | Fall 2026</p>
+        <p>Chris David</p>
+    </header>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#assignments">Assignments</a>
-    <a href="#projects">Projects</a>
-  </nav>
+    <main>
+        <h2>Course Assignments</h2>
 
-  <main id="home">
+        <div class="card">
+            <h3>Assignment 1</h3>
 
-    <section>
-      <h2>Welcome</h2>
-      <p>
-        Welcome to my ECE Internet of Things
-        assignment portfolio. This website contains
-        my coursework, database exercises, source
-        code, and project documentation.
-      </p>
-    </section>
+            <p>
+                MariaDB Sensor Database
+            </p>
 
-    <section id="assignments">
-      <h2>Course Assignments</h2>
+            <a class="button"
+   href="https://github.com/ChrisDavid2311/ECE570_IOT-/tree/main/Database/Assignment1"
+   target="_blank"
+   rel="noopener noreferrer">
+    View Assignment 1 on GitHub
+</a>
+        </div>
+    </main>
 
-      <div class="card">
-        <h3>Assignment 1: MariaDB Sensor Database</h3>
-
-        <p>
-          Designed sensor_register and sensor_data
-          tables using MariaDB. Implemented primary
-          keys, foreign keys, sensor readings, and
-          a combined SQL VIEW.
-        </p>
-
-        <a class="button"
-           href="assignments/assignment1.sql"
-           target="_blank">
-           SQL Code
-        </a>
-
-        <a class="button"
-           href="assignments/assignment1.pdf"
-           target="_blank">
-           Assignment Report
-        </a>
-      </div>
-
-      <div class="card">
-        <h3>Assignment 2: IoT Sensor Monitoring</h3>
-
-        <p>
-          Future assignment involving IoT sensor
-          communication and data monitoring.
-        </p>
-
-        <p>Coming soon.</p>
-      </div>
-
-      <div class="card">
-        <h3>Assignment 3: IoT Applications</h3>
-
-        <p>
-          Additional IoT coursework and project
-          documentation will be added here.
-        </p>
-
-        <p>Coming soon.</p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <div class="card">
-        <h3>IoT Project Resources</h3>
-
-        <p>
-          Project source code, hardware information,
-          and technical documentation.
-        </p>
-
-        <a class="button"
-           href="https://github.com/"
-           target="_blank"
-           rel="noopener noreferrer">
-           GitHub
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>ECE IoT | Sonoma State University</p>
-    <p>Chris David | 2026</p>
-  </footer>
+    <footer>
+        <p>ECE IoT | Sonoma State University | 2026</p>
+    </footer>
 
 </body>
 </html>
