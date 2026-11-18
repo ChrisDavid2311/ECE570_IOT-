@@ -4,8 +4,8 @@
 #include <PubSubClient.h>
 
 // Replace these with your Wi-Fi network name and password.
-const char* ssid = "ChrisDavidiPhone17";
-const char* password = "Jeeva@18";
+const char* ssid = "";
+const char* password = "";
 
 // HiveMQ public broker, MQTT over TLS.
 const char* mqtt_server = "broker.hivemq.com";
